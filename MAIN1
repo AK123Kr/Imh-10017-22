@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the size of the array: ");
+        int sizeOfArray = scanner.nextInt();
+        
+        int[] userArray = new int[sizeOfArray];
+        
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < sizeOfArray; i++) {
+            System.out.print("Element " + (i + 1) + ": ");
+            userArray[i] = scanner.nextInt();
+        }
+        
+        int numberOfElements = userArray.length;
+        
+        System.out.println("Array created:");
+        for (int i = 0; i < sizeOfArray; i++) {
+            System.out.print(userArray[i] + " ");
+        }
+        
+        System.out.println("\nNumber of elements in the array: " + numberOfElements);
+        
+        scanner.close();
+    }
+}
