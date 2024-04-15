@@ -1,0 +1,377 @@
+//q1
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class Q1 {
+    //<editor-fold defaultstate="collapsed" desc="/*comment*/">
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of  :");    
+        int sizeOfArray =sc.nextInt();
+        System.out.println("Enter the number of elements :");
+        int numberOfElement=sc.nextInt();
+        int arr[]=new int[sizeOfArray];
+        for(int i=0;i<numberOfElement;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<numberOfElement;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+//</editor-fold>
+    
+    
+}    
+    
+
+  
+///q2*********
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class Assignment2a {
+      public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of Array : ");
+        int sizeOfArray =sc.nextInt();
+        System.out.println("Enter the number of elements of Array: ");
+        int numberOfElement=sc.nextInt();
+        int arr[]=new int[sizeOfArray];
+        for(int i=0;i<numberOfElement;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<numberOfElement;i++){
+            System.out.print(arr[i]+" ");
+        }
+        
+        System.out.println("Index of Inserttion : ");
+        int  position=sc.nextInt();
+        System.out.println("Enter the value to be inserted ; ");
+        int element=sc.nextInt();
+        for(int j=numberOfElement-1;j>=position;j--){
+            arr[j+1]=arr[j];
+        }
+        arr[position]=element;
+        numberOfElement++;
+        for(int i=0;i<numberOfElement;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    
+}
+
+
+///q3**********
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class q3{ 
+         public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of Array");
+        int n =sc.nextInt();
+        System.out.println("Enter the number of elements of Array");
+        int totalElement=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<totalElement;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<totalElement;i++){
+            System.out.print(arr[i]+" ");
+        }
+        
+        System.out.println("Index of dleetion : ");
+        int  loc=sc.nextInt();
+        for(int j=loc;j<totalElement;j++){
+            arr[j]=arr[j+1];
+        }
+       
+        totalElement--;
+        for(int i=0;i<totalElement;i++){
+            System.out.print(arr[i]+" ");
+        }        
+    }
+    
+}
+
+
+////q4**********
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class q4 {
+      public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+          System.out.println("size of array:");
+        int sizeOfArray =sc.nextInt();
+          System.out.println("No of elements");
+        int numberOfElement=sc.nextInt();
+        int arr[]=new int[sizeOfArray];
+        for(int i=0;i<numberOfElement;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("Enter the element to be searched :");
+        int element=sc.nextInt();
+        for(int i=0;i<numberOfElement;i++){
+            if(arr[i]==element){
+                System.out.println("Element "+element+" found at index "+i);
+            }
+        }
+
+        
+    }
+        
+        
+    
+}
+
+
+///q5*******
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class q5 {
+              public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+                  System.out.println("size of array :");
+        int sizeOfArray =sc.nextInt();
+                  System.out.println("No of elements");
+        int numberOfElement=sc.nextInt();
+        int arr[]=new int[sizeOfArray];
+        for(int i=0;i<numberOfElement;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<numberOfElement;i++){
+            int c=0;
+            for(int j=0;j<numberOfElement;j++){
+                if(arr[i]==arr[j]){
+                    c++;
+                    
+                    
+                    
+                } 
+                
+            } 
+            System.out.println("Element "+arr[i]+" has frequency "+c);
+                    
+        }
+            
+    }
+
+    
+}
+
+
+////q6*********
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class q6 {
+      public static void main(String[] args) {
+        Scanner sc;
+          sc = new Scanner(System.in);
+          System.out.println("Enter n :");
+        int n =sc.nextInt();
+       
+        int arr[]=new int[n];
+        int even[]=new int[n];
+        int odd[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int j=0,k=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]%2==0){
+                even[j]=arr[i];
+                j++;
+                
+            }
+            else{
+                odd[k]=arr[i];
+                k++;
+            }
+        } 
+        System.out.println(" Even ");
+        for(int h=0;h<j;h++){
+            System.out.print(even[h]);
+        }
+        System.out.println(" oDD ");
+        for(int h=0;h<k;h++){
+            System.out.print(odd[h]);
+        }
+      
+    }
+    
+}
+
+/////q7*******
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class q7 {
+          public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        System.out.println("Enter n : ");   
+        int n =sc.nextInt();
+        int arr[]=new int[n];
+        System.out.println("Enter the position from where to split index : "); 
+        int g =sc.nextInt();
+        int arr1[]=new int[n];
+        int arr2[]=new int[n];
+              System.out.println("Enter alement of main Array :");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int j=0,k=0;
+        for(int i=0;i<n;i++){
+            if(i<=g){
+                arr1[j]=arr[i];
+                j++;
+            }
+            else{
+                arr2[k]=arr[i];
+                k++;
+            }
+        }
+        System.out.println("arr1");
+        for(int h=0;h<j;h++){
+            System.out.print(arr1[h]+" ");
+        }
+        for(int h=0;h<j;h++){
+            int c =0;
+            for(int f=0;f<j;f++){
+                if(arr1[h]==arr1[f]){
+                   c++; 
+                }
+            }
+            System.out.println("Element "+arr1[h]+" has frequency "+c);
+                    
+        }
+        System.out.println(" arr2");
+        for(int h=0;h<k;h++){
+            System.out.print(arr2[h]+" ");
+        }
+        for(int h=0;h<k;h++){
+            
+            int c =0;
+            for(int f=0;f<j;f++){
+                if(arr2[h]==arr2[f]){
+                   c++; 
+                }
+            }
+            System.out.println("Element "+arr2[h]+" has frequency "+c);
+                    
+        }
+        
+      
+    }
+
+    
+}
+
+
+////q8******
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author acer
+ */
+public class q8{
+      public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+          System.out.println("Enter n:");
+        int n =sc.nextInt();
+        
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<n-1;i++){
+            if(arr[i]>=arr[i+1]){
+                System.out.println("peak element at index "+i+" is "+arr[i]);    
+                
+            } 
+        }    
+    }
+        
+    
+}
+
